@@ -1,0 +1,9 @@
+"p_id","p_name","p_description","price","data_limit","op_id"
+1,"Package A","Small data package","10.99","1.5",1
+2,"Package B","Medium data package","19.99","3.0",2
+3,"Package C","Large data package","29.99","5.0",3
+4,"Package D","Basic data package","9.99","1.0",1
+5,"Package E","Unlimited data package","49.99","6.0",2
+6,"Package F","Family data package","34.99","8.0",1
+7,"Package G","Student data package","14.99","2.5",3
+8,"Package H","Business data package","39.99","6.0",2
