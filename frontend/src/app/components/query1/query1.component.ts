@@ -19,15 +19,13 @@ export class Query1Component implements OnInit {
   }
 
   ngOnInit() {
-    this.query1DivisionData();
+    this.query1Data();
   }
 
-  query1DivisionData(): void {
-    this.queryService.getQuery1Division().subscribe((data: any) => {
+  query1Data(): void {
+    this.queryService.getQuery1().subscribe((data: any) => {
         for (const d of data) {
           console.log(d)
-          this.division.push(d.division)
-          this.sales.push(d.sales)
         }
         this.data_all = data;
       }
