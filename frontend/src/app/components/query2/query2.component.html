@@ -1,12 +1,32 @@
 <div class="container">
   <div class="row">
-    <div class="col-4 p-2">
+    <div class="col-4 p-2" style="height: 300px; overflow-y: auto;">
       <div class="card p-2 text-center">
-        <h2 class="text-primary text-center">Query 2</h2>
+        <h2 class="text-primary text-center">Transaction Type wise Total Sales</h2>
         <h6 *ngFor="let data of data_all">
-          {{data.trans_type}} - {{data.total_sales}}
+          {{ data.trans_type }} - {{ data.total_sales }}
         </h6>
       </div>
     </div>
+    <div class="col-8">
+      <div class="chart-wrapper">
+        <canvas baseChart
+                [type]="'pie'"
+                [datasets]="chartData"
+                [labels]="chartLabels"
+                [options]="chartOptions">
+        </canvas>
+      </div>
+    </div>
+  </div>
+  <div class="card-text">
+    <h5>
+      Analysis:
+    </h5>
+    <p>
+      This analysis shows the pie chart of the total sales according to each transaction types in the E-com Database.
+      <br>
+      It can be clearly observed that, the total sales by cards is the dominant of the three.
+    </p>
   </div>
 </div>

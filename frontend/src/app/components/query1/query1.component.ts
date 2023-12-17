@@ -15,6 +15,44 @@ export class Query1Component implements OnInit {
   division: any[] = [];
   sales: any[] = [];
 
+  chartData: ChartDataset[] = [
+    {
+      type: "pie",
+      label: "Sales in Taka",
+      data: this.sales,
+    }
+  ];
+
+  chartLabels: string[] = this.division;
+
+  chartOptions: ChartOptions = {
+    responsive: true,
+    maintainAspectRatio: true,
+    aspectRatio: 1.5,
+
+    plugins: {
+      legend: {
+        display: true,
+      },
+      tooltip: {
+        backgroundColor: '#ffeaff',
+        displayColors: true,
+        padding: 18,
+
+        titleColor: '#0B4AD2',
+        titleFont: {
+          size: 18
+        },
+
+        bodyColor: '#2D2F33',
+        bodyFont: {
+          size: 13
+        }
+      }
+    }
+  };
+
+
   constructor(private queryService: QueryService, private http: HttpClient) {
   }
 
@@ -26,7 +64,15 @@ export class Query1Component implements OnInit {
     this.queryService.getQuery1().subscribe((data: any) => {
         for (const d of data) {
           console.log(d)
+          this.division.push(d.division)
+          this.sales.push(d.sales)
         }
+        this.chartData = [{
+          type: "pie",
+          label: "Sales in Taka",
+          data: this.sales,
+          }];
+        this.chartLabels = this.division;
         this.data_all = data;
       }
     )

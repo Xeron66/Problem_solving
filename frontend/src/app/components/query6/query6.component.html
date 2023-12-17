@@ -1,12 +1,30 @@
 <div class="container">
   <div class="row">
-    <div class="col-4 p-2">
+    <div class="col-4 p-2" style="height: 600px; overflow-y: auto;">
       <div class="card p-2 text-center">
-        <h2 class="text-primary text-center">Query 6</h2>
+        <h2 class="text-primary text-center">Top 3 most purchased products of each Store</h2>
         <h6 *ngFor="let data of data_all">
           {{data.Store}} - {{data.Item}} - {{data.Quantity}}
         </h6>
       </div>
     </div>
+    <div class="col-8">
+      <div class="chart-wrapper">
+        <canvas baseChart
+                [type]="'bar'"
+                [datasets]="chartData"
+                [labels]="chartLabels"
+                [options]="chartOptions">
+        </canvas>
+      </div>
+    </div>
+  </div>
+  <div class="card-text">
+    <h5>
+      Analysis:
+    </h5>
+    <p>
+      This Analysis shows the bar chart of each store's top 3 best sold items.
+    </p>
   </div>
 </div>

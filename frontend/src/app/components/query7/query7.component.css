@@ -1,0 +1,70 @@
+/* Add your existing styles here */
+
+/* Style for the form container */
+.card-body {
+  margin-bottom: 20px;
+}
+
+/* Style for the form label and input */
+.form-label {
+  font-weight: bold;
+}
+
+/* Style for the card body */
+.card-body {
+  margin-top: 20px;
+}
+
+/* Style for the message when no data is available */
+.card-body div {
+  margin-bottom: 10px;
+}
+
+/* Style for the "Data Received" message */
+#elseBlock {
+  color: green;
+  font-weight: bold;
+}
+
+/* Style for the card containing the data */
+.collapse.multi-collapse {
+  margin-top: 20px;
+}
+
+/* Style for the row containing the data */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Style for each column containing each item */
+.col-4 {
+  width: 25%;
+  padding: 10px;
+}
+
+/* Style for the list items */
+li {
+  list-style: none;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+}
+
+/* Hover effect on list items */
+li:hover {
+  background-color: #e5e5e5;
+}
+
+/* Additional styling for the search box and button */
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* Style for the output box */
+.output-box {
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-top: 20px;
+}
